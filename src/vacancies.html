@@ -241,11 +241,11 @@
       <section class="vacancies section-pad-bottom section-hidden">
         <div class="container">
           <div class="vacancies__containr">
-            <h3 class="vacancies__title">Вступай в наши ряды</h3>
+            <h3 class="vacancies__title text-up up">Вступай в наши ряды</h3>
             <div class="vacancies__accordion">
-              <div class="vacancies__item" id="1">
+              <div class="vacancies__item up" id="vac-1">
                 <div class="vacancies__top">
-                  <span class="num">01.</span>
+                  <span class="vacancies__num">01.</span>
                   <div class="vacancies__box">
                     <div class="vacancies__caption title-sm">Web-designer</div>
                     <ul class="vacancies__list">
@@ -254,27 +254,27 @@
                       <li>UX/UI</li>
                       <li>Adobe Photoshop</li>
                     </ul>
-                  </div>
-                  <div class="vacancies__desc hidden">			
-                    Требуемый опыт (1-3 года).
+                    <div class="vacancies__desc hidden">			
+                      Требуемый опыт (1-3 года).
+                    </div>
+                    <div class="vacancies__modal-btn button hidden" data-toggle="modal" data-target="#vac-modal">
+                      { Оставить заявку }
+                    </div>
+                    <button class="vacancies__share button hidden" data-url="/vacancies/?id=1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                        <path d="M7.125 10.6875L11.875 13.0625M11.875 5.9375L7.125 8.3125M14.25 16.625C12.9383 16.625 11.875 15.5617 11.875 14.25C11.875 12.9383 12.9383 11.875 14.25 11.875C15.5617 11.875 16.625 12.9383 16.625 14.25C16.625 15.5617 15.5617 16.625 14.25 16.625ZM4.75 11.875C3.43832 11.875 2.375 10.8117 2.375 9.5C2.375 8.18832 3.43832 7.125 4.75 7.125C6.06168 7.125 7.125 8.18832 7.125 9.5C7.125 10.8117 6.06168 11.875 4.75 11.875ZM14.25 7.125C12.9383 7.125 11.875 6.06168 11.875 4.75C11.875 3.43832 12.9383 2.375 14.25 2.375C15.5617 2.375 16.625 3.43832 16.625 4.75C16.625 6.06168 15.5617 7.125 14.25 7.125Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                      <span>Поделиться</span>
+                    </button>
                   </div>
                   <div class="vacancies__img">
-                    <img src="https://factum.agency/wp-content/uploads/2025/02/serv-page-img.png">
-                  </div>
-                  <div class="vacancies__modal-btn button hidden" data-toggle="modal" data-target="#vac-modal">
-                    { Оставить заявку }
+                    <img src="https://factum.agency/wp-content/uploads/2024/02/5799082-kopiya-1.png">
                   </div>
                   <div class="vacancies__btn">
                     <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M22.5938 13.9062L20.4062 11.7188L13.0625 19.0625V0L9.9375 0V19.0625L2.59375 11.7188L0.40625 13.9062L11.5 25L22.5938 13.9062Z" fill="#222222"></path>
                     </svg>
                   </div>
-                  <button class="vacancies__share button hidden" data-url="/vacancies/?id=1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
-                      <path d="M7.125 10.6875L11.875 13.0625M11.875 5.9375L7.125 8.3125M14.25 16.625C12.9383 16.625 11.875 15.5617 11.875 14.25C11.875 12.9383 12.9383 11.875 14.25 11.875C15.5617 11.875 16.625 12.9383 16.625 14.25C16.625 15.5617 15.5617 16.625 14.25 16.625ZM4.75 11.875C3.43832 11.875 2.375 10.8117 2.375 9.5C2.375 8.18832 3.43832 7.125 4.75 7.125C6.06168 7.125 7.125 8.18832 7.125 9.5C7.125 10.8117 6.06168 11.875 4.75 11.875ZM14.25 7.125C12.9383 7.125 11.875 6.06168 11.875 4.75C11.875 3.43832 12.9383 2.375 14.25 2.375C15.5617 2.375 16.625 3.43832 16.625 4.75C16.625 6.06168 15.5617 7.125 14.25 7.125Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                    <span>Поделиться</span>
-                  </button>
                 </div>
                 <div class="vacancies__wrap hidden">
                   <div class="vacancies__cards">
@@ -324,38 +324,39 @@
                   </div>
                 </div>
               </div>
-              <div class="vacancies__item" id="2">
+              <div class="vacancies__item up" id="vac-2">
                 <div class="vacancies__top">
-                  <span class="num">02.</span>
+                  <span class="vacancies__num">02.</span>
                   <div class="vacancies__box">
                     <div class="vacancies__caption title-sm">Менеджер по продажам услуг</div>
-                    <ul class="vacancies__list"></ul>
-                  </div>
-                  <div class="vacancies__desc hidden">
-                    Здравствуйте!<br>
-                    Наша компания является лидирующей в своей области. Нам требуется менеджер по продажам. Мы ищем сотрудника сообразительного, с хорошей...СТОП!<br>
-                    <br>
-                    Уф, слушай, ты не устал от таких типичных вакансии и компании?<br>
-                    <br>
-                    Мы честно, устали и не хотим видеть в своей команде таких же типичных кандидатов. Так что, читай дальше внимательно кто мы и что творим. В первую очередь кого ищем. Если подходишь, не медли и напиши мне.				
+                    <ul class="vacancies__list">
+                    </ul>
+                    <div class="vacancies__desc hidden">			
+                      Здравствуйте!<br>
+                      Наша компания является лидирующей в своей области. Нам требуется менеджер по продажам. Мы ищем сотрудника сообразительного, с хорошей...СТОП!<br>
+                      <br>
+                      Уф, слушай, ты не устал от таких типичных вакансии и компании?<br>
+                      <br>
+                      Мы честно, устали и не хотим видеть в своей команде таких же типичных кандидатов. Так что, читай дальше внимательно кто мы и что творим. В первую очередь кого ищем. Если подходишь, не медли и напиши мне.
+                    </div>
+                    <div class="vacancies__modal-btn button hidden" data-toggle="modal" data-target="#vac-modal">
+                      { Оставить заявку }
+                    </div>
+                    <button class="vacancies__share button hidden" data-url="/vacancies/?id=1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                        <path d="M7.125 10.6875L11.875 13.0625M11.875 5.9375L7.125 8.3125M14.25 16.625C12.9383 16.625 11.875 15.5617 11.875 14.25C11.875 12.9383 12.9383 11.875 14.25 11.875C15.5617 11.875 16.625 12.9383 16.625 14.25C16.625 15.5617 15.5617 16.625 14.25 16.625ZM4.75 11.875C3.43832 11.875 2.375 10.8117 2.375 9.5C2.375 8.18832 3.43832 7.125 4.75 7.125C6.06168 7.125 7.125 8.18832 7.125 9.5C7.125 10.8117 6.06168 11.875 4.75 11.875ZM14.25 7.125C12.9383 7.125 11.875 6.06168 11.875 4.75C11.875 3.43832 12.9383 2.375 14.25 2.375C15.5617 2.375 16.625 3.43832 16.625 4.75C16.625 6.06168 15.5617 7.125 14.25 7.125Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                      <span>Поделиться</span>
+                    </button>
                   </div>
                   <div class="vacancies__img">
                     <img src="https://factum.agency/wp-content/uploads/2025/02/serv-page-img.png">
-                  </div>
-                  <div class="vacancies__modal-btn button hidden" data-toggle="modal" data-target="#vac-modal">
-                    { Оставить заявку }
                   </div>
                   <div class="vacancies__btn">
                     <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M22.5938 13.9062L20.4062 11.7188L13.0625 19.0625V0L9.9375 0V19.0625L2.59375 11.7188L0.40625 13.9062L11.5 25L22.5938 13.9062Z" fill="#222222"></path>
                     </svg>
                   </div>
-                  <button class="vacancies__share button hidden" data-url="/vacancies/?id=2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
-                      <path d="M7.125 10.6875L11.875 13.0625M11.875 5.9375L7.125 8.3125M14.25 16.625C12.9383 16.625 11.875 15.5617 11.875 14.25C11.875 12.9383 12.9383 11.875 14.25 11.875C15.5617 11.875 16.625 12.9383 16.625 14.25C16.625 15.5617 15.5617 16.625 14.25 16.625ZM4.75 11.875C3.43832 11.875 2.375 10.8117 2.375 9.5C2.375 8.18832 3.43832 7.125 4.75 7.125C6.06168 7.125 7.125 8.18832 7.125 9.5C7.125 10.8117 6.06168 11.875 4.75 11.875ZM14.25 7.125C12.9383 7.125 11.875 6.06168 11.875 4.75C11.875 3.43832 12.9383 2.375 14.25 2.375C15.5617 2.375 16.625 3.43832 16.625 4.75C16.625 6.06168 15.5617 7.125 14.25 7.125Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                    <span>Поделиться</span>
-                  </button>
                 </div>
                 <div class="vacancies__wrap hidden">
                   <div class="vacancies__cards">
@@ -385,6 +386,125 @@
           </div>
         </div>
       </section>
+      <section class="vacancies-other section-pad-bottom section-hidden">
+        <div class="container">
+          <div class="vacancies-other__container">
+            <h3 class="vacancies-other__title vacancies-other__title_left text-up fade-left">Вакансия <br> не нашлась!</h3>
+            <div class="vacancies-other__col">
+              <h3 class="vacancies-other__title vacancies-other__title_right text-up up">
+                Как быть
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="25" cy="25" r="25" fill="#F96100"/>
+                  <g clip-path="url(#clip0_3533_911)">
+                  <path d="M26.4286 33.2393C25.9208 32.7168 25.2274 32.4238 24.4999 32.4238H24.4511C22.9081 32.4238 21.663 33.6738 21.663 35.2119C21.663 36.75 22.9081 38 24.4511 38H24.4999C26.0429 37.9756 27.2684 36.7061 27.244 35.1631C27.2294 34.4404 26.9364 33.752 26.4286 33.2393ZM29.705 14.9189C28.4745 13.6543 26.7216 13.0098 24.4999 13H24.4511C22.6932 13 21.1942 13.4785 19.993 14.4258C19.4218 14.875 18.9139 15.3975 18.4794 15.9785C18.0595 16.5449 17.7177 17.1699 17.4735 17.834C17.3661 18.1318 17.5028 18.459 17.7909 18.5859L20.4227 19.7432C20.7255 19.875 21.077 19.7432 21.2089 19.4404C21.2138 19.4355 21.2138 19.4258 21.2186 19.4209C21.4628 18.8252 21.8534 18.2393 22.3807 17.6826C22.8495 17.1846 23.5282 16.9453 24.4511 16.9453H24.4999C25.4471 16.9551 26.1552 17.2041 26.663 17.7119C27.1757 18.2295 27.4247 18.8545 27.4247 19.6357C27.4247 20.29 27.2294 20.8906 26.829 21.4717C26.3895 22.1113 25.7401 22.8193 24.9003 23.5762C24.7636 23.7031 24.6268 23.8252 24.5048 23.9473C23.7577 24.6797 23.2401 25.3584 22.9325 26.0176C22.7518 26.4033 22.6151 26.8867 22.5175 27.4727C22.4149 28.1611 22.3612 28.8545 22.3612 29.5527C22.3563 29.8848 22.62 30.1533 22.9471 30.1631H22.9618H26.0966C26.4237 30.1631 26.6874 29.9043 26.6923 29.5771C26.7167 28.2441 26.868 27.5947 26.995 27.2822C27.1171 26.9795 27.5126 26.3789 28.6991 25.2363C29.6805 24.2988 30.413 23.3809 30.8671 22.5117C31.3358 21.6133 31.5751 20.6025 31.5751 19.5088C31.5653 17.7363 30.9403 16.1885 29.705 14.9189Z" fill="white"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3533_911">
+                  <rect width="25" height="25" fill="white" transform="translate(12 13)"/>
+                  </clipPath>
+                  </defs>
+                </svg>                  
+              </h3>
+              <div class="vacancies-other__accordion vacancies__accordion">
+                <div class="vacancies__item vacancies-other__item up" id="other-1">
+                  <div class="vacancies__top vacancies-other__top">
+                    <div class="vacancies__caption title-sm">Нет подходящей вакансии</div>
+                    <div class="vacancies__btn">
+                      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.5938 13.9062L21.4062 11.7188L14.0625 19.0625V0L10.9375 0V19.0625L3.59375 11.7188L1.40625 13.9062L12.5 25L23.5938 13.9062Z" fill="#222222"/>
+                      </svg>                        
+                    </div>
+                  </div>
+                  <div class="vacancies__wrap vacancies-other__wrap hidden">
+                    <div class="vacancies__desc vacancies-other__desc">Кстати, интерактивные прототипы, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.</div>
+                    <a href="" class="vacancies-other__link">{ Узнать больше }</a>
+                  </div>
+                </div>
+                <div class="vacancies__item vacancies-other__item up" id="other-2">
+                  <div class="vacancies__top vacancies-other__top">
+                    <div class="vacancies__caption title-sm">FACTUM можно помогать</div>
+                    <div class="vacancies__btn">
+                      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.5938 13.9062L21.4062 11.7188L14.0625 19.0625V0L10.9375 0V19.0625L3.59375 11.7188L1.40625 13.9062L12.5 25L23.5938 13.9062Z" fill="#222222"/>
+                      </svg>                        
+                    </div>
+                  </div>
+                  <div class="vacancies__wrap vacancies-other__wrap hidden">
+                    <div class="vacancies__desc vacancies-other__desc">Кстати, интерактивные прототипы, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.</div>
+                    <a href="" class="vacancies-other__link">{ Узнать больше }</a>
+                  </div>
+                </div>
+                <div class="vacancies__item vacancies-other__item up" id="other-3">
+                  <div class="vacancies__top vacancies-other__top">
+                    <div class="vacancies__caption title-sm">Как попасть на стажировку</div>
+                    <div class="vacancies__btn">
+                      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.5938 13.9062L21.4062 11.7188L14.0625 19.0625V0L10.9375 0V19.0625L3.59375 11.7188L1.40625 13.9062L12.5 25L23.5938 13.9062Z" fill="#222222"/>
+                      </svg>                        
+                    </div>
+                  </div>
+                  <div class="vacancies__wrap vacancies-other__wrap hidden">
+                    <div class="vacancies__desc vacancies-other__desc">Кстати, интерактивные прототипы, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.</div>
+                    <a href="" class="vacancies-other__link">{ Узнать больше }</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="vacancies-bottom">
+        <div class="container">
+          <div class="vacancies-bottom__container">
+            <div class="vacancies-bottom__socials">
+              <a href="" target="_blank">Презентация</a>
+              <a href="https://www.behance.net/FACTUM" target="_blank" rel="nofollow">Наш Behance</a>
+              <a href="" target="_blank">Factum Education</a>
+            </div>
+            <div class="vacancies-bottom__socials">
+              <a href="https://www.instagram.com/factum.agency/?igshid=MzRlODBiNWFlZA%3D%3D" target="_blank" rel="nofollow">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_3301_10241)">
+                  <path d="M14.5173 0H5.4827C2.45953 0 0 2.45953 0 5.48273V14.5173C0 17.5405 2.45953 20 5.4827 20H14.5173C17.5405 20 20 17.5405 20 14.5173V5.48273C20 2.45953 17.5405 0 14.5173 0ZM18.8189 14.5173C18.8189 16.8892 16.8893 18.8189 14.5173 18.8189H5.4827C3.11078 18.8189 1.18109 16.8893 1.18109 14.5173V5.48273C1.18109 3.11078 3.11078 1.18109 5.4827 1.18109H14.5173C16.8893 1.18109 18.8189 3.11078 18.8189 5.48273V14.5173Z" fill="#222222"/>
+                  <path d="M9.99999 4.5144C6.97522 4.5144 4.5144 6.97522 4.5144 9.99999C4.5144 13.0248 6.97519 15.4856 9.99999 15.4856C13.0248 15.4856 15.4856 13.0247 15.4856 9.99995C15.4856 6.97519 13.0248 4.5144 9.99999 4.5144ZM9.99999 14.3045C7.62647 14.3045 5.69546 12.3735 5.69546 9.99995C5.69546 7.62644 7.62647 5.69542 9.99999 5.69542C12.3735 5.69542 14.3046 7.62647 14.3046 9.99999C14.3046 12.3735 12.3735 14.3045 9.99999 14.3045Z" fill="#222222"/>
+                  <path d="M15.8136 2.51953C14.8946 2.51953 14.147 3.26723 14.147 4.18621C14.147 5.1052 14.8946 5.85285 15.8136 5.85285C16.7326 5.85285 17.4803 5.10516 17.4803 4.18617C17.4803 3.26719 16.7326 2.51953 15.8136 2.51953ZM15.8136 4.67172C15.5459 4.67172 15.3281 4.45391 15.3281 4.18617C15.3281 3.91844 15.5459 3.70062 15.8136 3.70062C16.0813 3.70062 16.2992 3.91848 16.2992 4.18617C16.2992 4.45387 16.0813 4.67172 15.8136 4.67172Z" fill="#222222"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3301_10241">
+                  <rect width="20" height="20" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>                  
+              </a>
+              <a href="" target="_blank" rel="nofollow">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_3301_10235)">
+                  <path d="M19.6081 1.63855C19.2864 1.34374 18.8291 1.2455 18.4146 1.3821L0.829101 7.17902C0.349843 7.33699 0.0248429 7.7648 0.00113193 8.26882C-0.0225399 8.77288 0.260858 9.22933 0.723124 9.43163L5.07215 11.3344C5.09336 11.4329 6.34184 17.2234 6.3843 17.4202C6.43879 17.673 6.56711 17.8982 6.83894 17.9675C7.1139 18.0375 7.30816 17.8872 7.51332 17.7336C7.6275 17.6482 10.7407 15.317 10.7407 15.317L14.5137 18.4045C14.7334 18.5844 15.002 18.6782 15.2759 18.6782C15.4063 18.6782 15.5379 18.6569 15.666 18.6135C16.0631 18.4789 16.3575 18.1548 16.4534 17.7466L19.9677 2.80511C20.0676 2.38031 19.9299 1.93335 19.6081 1.63855ZM7.79445 12.4248C7.7923 12.4299 7.79019 12.4356 7.7882 12.4425L7.0607 14.9842L6.24883 11.2188L11.8315 8.11702L7.92836 12.1982C7.86687 12.2625 7.82164 12.3402 7.79445 12.4248ZM8.02535 15.8828L8.35578 14.7283L8.67183 13.6241L9.8043 14.5508L8.02535 15.8828ZM18.8243 2.53613L15.31 17.4776C15.3083 17.485 15.3059 17.4953 15.2887 17.5011C15.2717 17.5069 15.2634 17.5003 15.2576 17.4954L11.129 14.117C11.1289 14.1169 11.1288 14.1168 11.1287 14.1167L9.21586 12.5514L15.3613 6.1257C15.562 5.91581 15.5792 5.59078 15.4017 5.36089C15.2242 5.13097 14.9053 5.06531 14.6516 5.2064L5.55191 10.2622L1.19398 8.35546C1.1807 8.34968 1.1734 8.34644 1.17445 8.32398C1.17551 8.30159 1.18309 8.29906 1.19684 8.29452L18.7823 2.49765C18.7908 2.49488 18.8004 2.49167 18.8146 2.50456C18.8287 2.51753 18.8264 2.52738 18.8243 2.53613Z" fill="#222222"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3301_10235">
+                  <rect width="20" height="20" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>                  
+              </a>
+              <a href="https://www.youtube.com/@factum.agency" target="_blank" rel="nofollow">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_3301_10232)">
+                  <path d="M8.2824 6.54679C7.86824 6.29929 7.3374 6.59846 7.3374 7.08346V12.9168C7.3374 13.4043 7.86907 13.6993 8.2824 13.4543L13.1732 10.5418C13.5799 10.2993 13.5791 9.71096 13.1741 9.46762L8.2824 6.54679ZM8.5874 11.8176V8.18429L11.6332 10.0035L8.5874 11.8176Z" fill="#222222"/>
+                  <path d="M16.5867 2.72582C12.7092 2.14999 7.2925 2.14999 3.41333 2.72582C1.86167 2.95582 0.639167 4.17415 0.3725 5.75582C-0.124167 8.69165 -0.124167 11.3092 0.3725 14.2442C0.639167 15.8267 1.86167 17.0442 3.41333 17.2742C5.35667 17.5625 7.68333 17.7067 10.0092 17.7067C12.3308 17.7067 14.6517 17.5633 16.5875 17.275C18.1375 17.045 19.3592 15.8275 19.6275 14.245C20.1242 11.3092 20.1242 8.69082 19.6275 5.75499C19.3608 4.17415 18.1383 2.95582 16.5867 2.72582ZM18.395 14.0367C18.2175 15.0833 17.4175 15.8883 16.4033 16.0383C12.6383 16.5975 7.37167 16.5975 3.59667 16.0375C2.58167 15.8867 1.78083 15.0825 1.60417 14.0358C1.12583 11.2075 1.12583 8.79332 1.60417 5.96332C1.78167 4.91665 2.58167 4.11332 3.5975 3.96165C5.4825 3.68249 7.74167 3.54249 9.99917 3.54249C12.2583 3.54249 14.5175 3.68249 16.4025 3.96165C17.4175 4.11249 18.2183 4.91665 18.395 5.96332C18.8733 8.79332 18.8733 11.2075 18.395 14.0367Z" fill="#222222"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3301_10232">
+                  <rect width="20" height="20" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>                  
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     @@include('html/footer.html') 

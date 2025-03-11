@@ -20,4 +20,43 @@ export function initializeSwipers() {
       },
     },
   });
+  var thumbs = new Swiper(".growth-thumb", {
+    direction: "vertical",
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".growth-next",
+      prevEl: ".growth-prev",
+    },
+    breakpoints: {
+      768: {
+        direction: "vertical",
+      },
+    },
+  });
+  
+  var slider = new Swiper(".growth-slider", {
+    direction: "vertical",
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".growth-pagination",
+      type: "custom",
+      renderCustom: function (swiper, current, total) {
+        return current + "/" + total;
+      },
+    },
+    navigation: {
+      nextEl: ".growth-next",
+      prevEl: ".growth-prev",
+    },
+    thumbs: {
+      swiper: thumbs,
+    },
+    breakpoints: {
+      768: {
+        direction: "vertical",
+      },
+    },
+  });
 }

@@ -151,6 +151,7 @@ textarea {
   width: max-content;
   border: none;
   border-radius: 0;
+  background-color: transparent;
   font: 600 14px/1 ZonaPro;
   text-transform: uppercase;
   @include transition;

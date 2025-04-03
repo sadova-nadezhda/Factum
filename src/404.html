@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "404" })
+  <body>
+    @@include('html/header.html', { "class": "", "img": "@img/logo.svg" })
+
+    <main>
+      <section class="page-error 404 section-first section-hidden">
+        <div class="container">
+          <div class="page-error__container">
+            <div class="page-error__box">
+              <span>4</span>
+              <a href="/" class="page-error__link button button-circle button-orange">{ На главную }</a>
+              <span>4</span>
+            </div>
+            <div class="page-error__txt glitch">Error</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

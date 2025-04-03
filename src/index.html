@@ -2,18 +2,350 @@
 <html lang="en">
   @@include('html/head.html', { "title": "Главная" })
   <body>
-    @@include('html/header.html')
+    @@include('html/header.html', { "class": "light", "img": "@img/logo-2.svg" })
 
     <main>
-      <section class="hero section-first section-hidden">
+      <section class="main-hero section-first section-dark section-pad section-hidden">
         <div class="container">
-          <div class="hero__container">
-            
+          <div class="main-hero__container">
+            <h1 class="main-hero__title up">Digital-бюро полного цикла</h1>
+            <div class="main-hero__cards">
+              <a class="main-hero__card" href="">
+                <h4 class="main-hero__caption">ads</h4>
+              </a>
+              <a class="main-hero__card" href="">
+                <h4 class="main-hero__caption">smm</h4>
+              </a>
+              <a class="main-hero__card" href="">
+                <h4 class="main-hero__caption">web</h4>
+              </a>
+              <a class="main-hero__card" href="">
+                <h4 class="main-hero__caption">seo</h4>
+              </a>
+              <a class="main-hero__card" href="">
+                <h4 class="main-hero__caption">consult</h4>
+              </a>
+            </div>
+            <div class="main-hero__desc up">Название <strong>Factum</strong> <br> произошло от фразы на латыни <br> <strong>«DICTUM - FACTUM»</strong> <br> что в переводе означает: <br> <strong>Сказано - Сделано.</strong></div>
+          </div>
+        </div>
+      </section>
+      <section class="main-services section-pad section-hidden">
+        <div class="container">
+          <div class="main-services__container">
+            <div class="main-services__heading heading up">
+              <h2 class="main-services__title title-sm">Услуги.</h2>
+              <!-- Проверка если пусто не выводить subtitle -->
+              <!-- <div class="main-services__subtitle subtitle"></div> -->
+              <a class="main-services__link link" href="">Все услуги</a>
+            </div>
+          </div>
+        </div>
+        <div class="main-services__rows">
+          <a class="main-services__row up" href="">
+            <div class="container">
+              <div class="main-services__num">01</div>
+              <h4 class="main-services__caption title-sm">Создание сайтов в Астане</h4>
+            </div>
+          </a>
+          <a class="main-services__row up" href="">
+            <div class="container">
+              <div class="main-services__num">02</div>
+              <h4 class="main-services__caption title-sm">SEO продвижение сайтов в Google и Яндекс</h4>
+            </div>
+          </a>
+          <a class="main-services__row up" href="">
+            <div class="container">
+              <div class="main-services__num">03</div>
+              <h4 class="main-services__caption title-sm">Таргетированная реклама</h4>
+            </div>
+          </a>
+          <a class="main-services__row up" href="">
+            <div class="container">
+              <div class="main-services__num">04</div>
+              <h4 class="main-services__caption title-sm">Разработка интернет магазинов</h4>
+            </div>
+          </a>
+          <a class="main-services__row up" href="">
+            <div class="container">
+              <div class="main-services__num">05</div>
+              <h4 class="main-services__caption title-sm">Контекстная реклама в Астане</h4>
+            </div>
+          </a>
+          <a class="main-services__row up" href="">
+            <div class="container">
+              <div class="main-services__num">06</div>
+              <h4 class="main-services__caption title-sm">Маркетинговый консалтинг</h4>
+            </div>
+          </a>
+          <a class="main-services__row up" href="">
+            <div class="container">
+              <div class="main-services__num">07</div>
+              <h4 class="main-services__caption title-sm">SMM-продвижение</h4>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="main-projects section-dark section-pad section-hidden">
+        <div class="container">
+          <div class="main-projects__container">
+            <div class="main-projects__heading heading up">
+              <h2 class="main-projects__title title-sm">проекты.</h2>
+              <!-- Проверка если пусто не выводить subtitle -->
+              <!-- <div class="main-projects__subtitle subtitle"></div> -->
+              <a class="main-projects__link link" href="">Все проекты</a>
+            </div>
+            <div class="main-projects__rows">
+              <div class="main-projects__row up">
+                <div class="main-projects__type">Web</div>
+                <div class="main-projects__cards">
+                  <a class="main-projects__card" data-title="" data-industry="" href="">
+                    <div class="main-projects__img">
+                      <img src="@img/project-1.png" alt="">
+                    </div>
+                    <div class="main-projects__bottom">
+                      <div class="main-projects__group main-projects__name">
+                        Название:
+                        <span>Family Medical</span>
+                      </div>
+                      <div class="main-projects__group main-projects__industry">
+                        Отрасль:
+                        <span>Семейная медицина</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="main-projects__card" data-title="" data-industry="" href="">
+                    <div class="main-projects__img">
+                      <img src="@img/project-2.png" alt="">
+                    </div>
+                    <div class="main-projects__bottom">
+                      <div class="main-projects__group main-projects__name">
+                        Название:
+                        <span>NZC</span>
+                      </div>
+                      <div class="main-projects__group main-projects__industry">
+                        Отрасль:
+                        <span>Семейная медицина</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="main-projects__card" data-title="" data-industry="" href="">
+                    <div class="main-projects__img">
+                      <img src="@img/project-3.png" alt="">
+                    </div>
+                    <div class="main-projects__bottom">
+                      <div class="main-projects__group main-projects__name">
+                        Название:
+                        <span>ProfiDM</span>
+                      </div>
+                      <div class="main-projects__group main-projects__industry">
+                        Отрасль:
+                        <span>Семейная медицина</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="main-projects__card" data-title="" data-industry="" href="">
+                    <div class="main-projects__img">
+                      <img src="@img/project-4.png" alt="">
+                    </div>
+                    <div class="main-projects__bottom">
+                      <div class="main-projects__group main-projects__name">
+                        Название:
+                        <span>Family Medical</span>
+                      </div>
+                      <div class="main-projects__group main-projects__industry">
+                        Отрасль:
+                        <span>Семейная медицина</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <a href="" class="main-projects__link link">еще</a>
+              </div>
+              <div class="main-projects__row up">
+                <div class="main-projects__type">seo</div>
+                <div class="main-projects__cards projects__cards">
+                  <a class="main-projects__card" data-title="" data-industry="" href="">
+                    <div class="main-projects__img">
+                      <img src="@img/project-5.png" alt="">
+                    </div>
+                    <div class="main-projects__bottom">
+                      <div class="main-projects__group main-projects__name">
+                        Название:
+                        <span>NZC</span>
+                      </div>
+                      <div class="main-projects__group main-projects__industry">
+                        Отрасль:
+                        <span>Семейная медицина</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="main-projects__card" data-title="" data-industry="" href="">
+                    <div class="main-projects__img">
+                      <img src="@img/project-6.png" alt="">
+                    </div>
+                    <div class="main-projects__bottom">
+                      <div class="main-projects__group main-projects__name">
+                        Название:
+                        <span>ProfiDM</span>
+                      </div>
+                      <div class="main-projects__group main-projects__industry">
+                        Отрасль:
+                        <span>Семейная медицина</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="main-projects__card" data-title="" data-industry="" href="">
+                    <div class="main-projects__img">
+                      <img src="@img/project-7.png" alt="">
+                    </div>
+                    <div class="main-projects__bottom">
+                      <div class="main-projects__group main-projects__name">
+                        Название:
+                        <span>Family Medical</span>
+                      </div>
+                      <div class="main-projects__group main-projects__industry">
+                        Отрасль:
+                        <span>Семейная медицина</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <a href="" class="main-projects__link link">еще</a>
+              </div>
+              <div class="main-projects__row up">
+                <div class="main-projects__type">smm</div>
+                <div class="main-projects__cards projects__cards">
+                  <a class="main-projects__card" data-title="" data-industry="" href="">
+                    <div class="main-projects__img">
+                      <img src="@img/project-8.png" alt="">
+                    </div>
+                    <div class="main-projects__bottom">
+                      <div class="main-projects__group main-projects__name">
+                        Название:
+                        <span>NZC</span>
+                      </div>
+                      <div class="main-projects__group main-projects__industry">
+                        Отрасль:
+                        <span>Семейная медицина</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="main-projects__card" data-title="" data-industry="" href="">
+                    <div class="main-projects__img">
+                      <img src="@img/project-9.png" alt="">
+                    </div>
+                    <div class="main-projects__bottom">
+                      <div class="main-projects__group main-projects__name">
+                        Название:
+                        <span>ProfiDM</span>
+                      </div>
+                      <div class="main-projects__group main-projects__industry">
+                        Отрасль:
+                        <span>Семейная медицина</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <a href="" class="main-projects__link link">еще</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-about section-pad section-hidden">
+        <div class="container">
+          <div class="main-about__container">
+            <div class="main-about__heading heading up">
+              <h2 class="main-about__title title-sm">о нас.</h2>
+              <div class="main-about__subtitle subtitle">За 6 лет наша компания зарекомендовала себя, как надежного поставщика услуг в сфере digital рынка</div>
+              <a class="main-about__link link" href="">подробнее</a>
+            </div>
+            <div class="main-about__img"><img src="@img/team-2.png" alt=""></div>
+            <div class="main-about__desc up">
+              <p>Наша компания обладает необходимым кадровым, материальным и техническим потенциальном для реализации своих проектов.</p>
+              <p>Компания FACTUM выражает Вам свое почтение и рада предложить Вашей организации услуги по разработке сайтов, мобильных приложений и онлайн платформ, а также услуги по настройке контекстной рекламы, SEO оптимизации и технической поддержке Ваших систем.</p>
+            </div>
+            <div class="main-about__cards">
+              <div class="main-about__card flip">
+                <div class="main-about__count">01</div>
+                <div class="main-about__num">120+</div>
+                <div class="main-about__txt">проектов</div>
+              </div>
+              <div class="main-about__card flip">
+                <div class="main-about__count">02</div>
+                <div class="main-about__num">3м+</div>
+                <div class="main-about__txt">бюджета</div>
+              </div>
+              <div class="main-about__card flip">
+                <div class="main-about__count">03</div>
+                <div class="main-about__num">514</div>
+                <div class="main-about__txt">клиентов</div>
+              </div>
+              <div class="main-about__card flip">
+                <div class="main-about__count">04</div>
+                <div class="main-about__num">514</div>
+                <div class="main-about__txt">клиентов</div>
+              </div>
+              <div class="main-about__card flip">
+                <div class="main-about__count">05</div>
+                <div class="main-about__num">120+</div>
+                <div class="main-about__txt">проектов</div>
+              </div>
+              <div class="main-about__card flip">
+                <div class="main-about__count">06</div>
+                <div class="main-about__num">3м+</div>
+                <div class="main-about__txt">бюджета</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-clients section-pad-bottom section-hidden">
+        <div class="container">
+          <div class="main-clients__container">
+            <div class="main-clients__heading heading up">
+              <h2 class="main-clients__title title-sm">клиенты.</h2>
+              <div class="main-about__subtitle subtitle">с нами работают топовые бенды и многие лидеры самых разных отраслей</div>
+              <a class="main-clients__link link" href="">подробнее</a>
+            </div>
+            <div class="main-clients__cards">
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-1.png" alt=""></div>
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-2.png" alt=""></div>
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-3.png" alt=""></div>
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-4.png" alt=""></div>
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-5.png" alt=""></div>
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-6.png" alt=""></div>
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-7.png" alt=""></div>
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-1.png" alt=""></div>
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-2.png" alt=""></div>
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-3.png" alt=""></div>
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-4.png" alt=""></div>
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-5.png" alt=""></div>
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-6.png" alt=""></div>
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-7.png" alt=""></div>
+              <div class="main-clients__card empty"></div>
+              <div class="main-clients__card scale-in"><img src="@img/client-1.png" alt=""></div>
+            </div>
           </div>
         </div>
       </section>
     </main>
-
+    @@include('html/modal.html') 
     @@include('html/footer.html') 
     @@include('html/foot.html')
   </body>

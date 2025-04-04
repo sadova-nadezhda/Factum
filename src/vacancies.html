@@ -5,7 +5,7 @@
     @@include('html/header.html', { "class": "", "img": "@img/logo.svg" })
 
     <main>
-      <section class="vacancies-hero section-first section-hidden">
+      <section class="vacancies-hero section-pad-top section-first section-hidden">
         <div class="container">
           <div class="vacancies-hero__container">
             <h1 class="vacancies-hero__title text-up up">
@@ -205,7 +205,7 @@
             <h3 class="vacancies-services__title text-up up">теперь нас <span>30</span></h3>
           </div>
         </div>
-        <div class="vacancies-services__wrap">
+        <!-- <div class="vacancies-services__wrap">
           <a class="vacancies-services__row up" href="#">
             <div class="container">
               <div class="vacancies-services__caption">Разработка сайтов</div>
@@ -249,6 +249,50 @@
               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.9062 1.40625L11.7188 3.59375L19.0625 10.9375L0 10.9375L0 14.0625L19.0625 14.0625L11.7188 21.4062L13.9062 23.5938L25 12.5L13.9062 1.40625Z" fill="white"/>
               </svg> 
+            </div>
+          </a>
+        </div> -->
+        <div class="main-services__rows">
+          <a class="main-services__row up" href="">
+            <div class="container">
+              <div class="main-services__num">01</div>
+              <h4 class="main-services__caption title-sm">Создание сайтов в Астане</h4>
+            </div>
+          </a>
+          <a class="main-services__row up" href="">
+            <div class="container">
+              <div class="main-services__num">02</div>
+              <h4 class="main-services__caption title-sm">SEO продвижение сайтов в Google и Яндекс</h4>
+            </div>
+          </a>
+          <a class="main-services__row up" href="">
+            <div class="container">
+              <div class="main-services__num">03</div>
+              <h4 class="main-services__caption title-sm">Таргетированная реклама</h4>
+            </div>
+          </a>
+          <a class="main-services__row up" href="">
+            <div class="container">
+              <div class="main-services__num">04</div>
+              <h4 class="main-services__caption title-sm">Разработка интернет магазинов</h4>
+            </div>
+          </a>
+          <a class="main-services__row up" href="">
+            <div class="container">
+              <div class="main-services__num">05</div>
+              <h4 class="main-services__caption title-sm">Контекстная реклама в Астане</h4>
+            </div>
+          </a>
+          <a class="main-services__row up" href="">
+            <div class="container">
+              <div class="main-services__num">06</div>
+              <h4 class="main-services__caption title-sm">Маркетинговый консалтинг</h4>
+            </div>
+          </a>
+          <a class="main-services__row up" href="">
+            <div class="container">
+              <div class="main-services__num">07</div>
+              <h4 class="main-services__caption title-sm">SMM-продвижение</h4>
             </div>
           </a>
         </div>
@@ -521,7 +565,7 @@
         </div>
       </div>
     </main>
-
+    @@include('html/modal.html') 
     @@include('html/footer.html') 
     @@include('html/foot.html')
   </body>

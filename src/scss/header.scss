@@ -17,6 +17,9 @@
     border: 0;
     color: var(--white, $white);
     background-color: var(--dark, $dark);
+    .header__container {
+      animation: down 1s cubic-bezier(.39,.575,.565,1) forwards;
+    }
   }
   &__container {
     position: relative;
@@ -26,7 +29,6 @@
     gap: 20px;
     font-size: 14px;
     font-weight: 700;
-    animation: down 1s cubic-bezier(.39,.575,.565,1) forwards;
   }
   &__logo {
     width: 135px;

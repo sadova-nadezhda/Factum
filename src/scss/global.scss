@@ -186,27 +186,33 @@ textarea {
 }
 
 h1, h2 {
-  font: 700 96px/1 Onest;
-  @media (max-width: 1400px) {
-    font-size: 72px;
-  }
-  @media (max-width: 1200px) {
-    font-size: 48px;
-  }
+  font: 700 40px/1 Onest;
   @media (max-width: 980px) {
-    font-size: 36px;
+    font-size: 32px;
+  }
+  @media (max-width: 767px) {
+    font-size: 24px;
   }
 }
 
 h3 {
-  font: 700 44px/1 Onest;
+  font: 700 30px/1 Onest;
   @media (max-width: 980px) {
-    font-size: 30px;
+    font-size: 24px;
+  }
+  @media (max-width: 767px) {
+    font-size: 22px;
   }
 }
 
 h4 {
   font: 700 24px/1 Onest;
+  @media (max-width: 980px) {
+    font-size: 22px;
+  }
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
 }
 
 h5, h6 {

@@ -7,6 +7,12 @@
   background-color: var(--white, $white);
   border-bottom: 1px solid rgba(192, 192, 192, 1);
   z-index: 9;
+  @media (max-width: 980px) {
+    padding: 20px 0;
+  }
+  @media (max-width: 767px) {
+    padding: 16px 0;
+  }
   &.light {
     border: 0;
     color: var(--white, $white);
@@ -21,12 +27,6 @@
     font-size: 14px;
     font-weight: 700;
     animation: down 1s cubic-bezier(.39,.575,.565,1) forwards;
-    a:not(.header__logo) {
-      transition: color 0.3s ease-out;
-      &:hover {
-        color: var(--primary, $primary);
-      }
-    }
   }
   &__logo {
     width: 135px;
@@ -46,6 +46,12 @@
     align-items: center;
     gap: 32px;
     font-weight: 600;
+    a {
+      transition: color 0.3s ease-out;
+      &:hover {
+        color: var(--primary, $primary);
+      }
+    }
     @media(max-width: 767px) {
       display: none;
     }
@@ -83,8 +89,10 @@
     line-height: 1;
   }
   &__feedback {
+    transition: color 0.3s ease-out;
     &:hover {
       cursor: pointer;
+      color: var(--primary, $primary);
     }
   }
   &__burger {

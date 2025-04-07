@@ -63,6 +63,7 @@
     .phone-wr {
       position: relative;
       display: block;
+      padding-bottom: 0;
       &::before, &::after {
         background-color: rgba(192, 192, 192, 1);
       }
@@ -72,23 +73,55 @@
     position: absolute;
     top: 0;
     right: 0;
+    transform-origin: top right;
+    background-color: var(--primary, $primary);
+    color: var(--white, $white);
     padding: 50px;
     border-radius: 24px;
-    color: var(--white, $white);
-    background-color: var(--primary, $primary);
     z-index: 1;
+    opacity: 0;
     transform: scale(0);
-    transform-origin: top right;
-    transition: transform 0.3s ease-out;
+    pointer-events: none;
+    transition: 
+      opacity 0.3s ease-out,
+      right 0.3s ease-out,
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
     &.open {
+      right: -5px;
+      opacity: 1;
       transform: scale(1);
+      pointer-events: auto;
+      .header__menu {
+        opacity: 1;
+      }
     }
   }
   &__menu {
     display: flex;
     flex-direction: column;
     gap: 35px;
+    min-width: 237px;
+    max-width: 237px;
     line-height: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.2s;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .dropdown-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-top: 16px;
+      color: rgba($color: #FFFFFF, $alpha: 0.6);
+      &.active {
+        display: flex;
+      }
+    }
   }
   &__feedback {
     transition: color 0.3s ease-out;
@@ -103,7 +136,7 @@
     align-items: center;
     gap: 12px;
     padding-right: 24px;
-    transition: padding 0.3s ease-out;
+    transition: color 0.3s ease-out;
     span {
       position: relative;
       display: block;
@@ -119,17 +152,18 @@
       display: block;
       width: 12px;
       height: 12px;
-      border-radius: 24px;
+      border-radius: 50px;
       background-color: var(--primary, $primary);
       transition: all 0.3s ease-out;
     }
     &:hover {
       cursor: pointer;
-      padding: 0 12px;
-      &::after {
-        width: 100%;
-        height: 100%;
-      }
+      color: var(--primary, $primary);
+      // padding: 0 12px;
+      // &::after {
+      //   width: 100%;
+      //   height: 100%;
+      // }
     }
   }
 }

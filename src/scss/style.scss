@@ -2790,7 +2790,7 @@
     height: 0;
     border-radius: 100%;
     background-color: var(--primary, $primary);
-    animation: dote-1 2s ease forwards, dote-2 2s ease forwards 3s;
+    animation: dote-1 2s ease forwards, dote-2 1s ease forwards 3s;
   }
 }
 

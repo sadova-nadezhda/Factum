@@ -5,6 +5,8 @@
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
+    "build": "NODE_ENV=production gulp build",
+    "dev": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "FLS",

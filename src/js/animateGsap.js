@@ -8,32 +8,6 @@ export function animateGsap() {
     toggleActions: "play none none reverse",
   };
 
-  if (document.querySelector(".line-left")) {
-    gsap.fromTo(".line-left",
-      { opacity: 0, x: '-100%' },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1.2,
-        ease: "power2.out",
-        scrollTrigger: { trigger: ".line-left", ...scrollTriggerConfig }
-      }
-    );
-  }
-  
-  if (document.querySelector(".line-right")) {
-    gsap.fromTo(".line-right",
-      { opacity: 0, x: '100%' },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1.2,
-        ease: "power2.out",
-        scrollTrigger: { trigger: ".line-right", ...scrollTriggerConfig }
-      }
-    );
-  }
-
   gsap.utils.toArray(".up").forEach(element => {
     gsap.fromTo(element,
       { yPercent: 60, opacity: 0 },
@@ -88,11 +62,11 @@ export function animateGsap() {
 
   gsap.utils.toArray(".scale-in").forEach(element => {
     gsap.fromTo(element,
-      { opacity: 0, scale: 0.8 },
+      { opacity: 0, scale: 0.6 },
       {
         opacity: 1,
         scale: 1,
-        duration: 1.2,
+        duration: 1.8,
         ease: "power2.out",
         scrollTrigger: { trigger: element, ...scrollTriggerConfig }
       }

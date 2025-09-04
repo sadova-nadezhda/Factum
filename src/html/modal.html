@@ -8,16 +8,14 @@
     <h4 class="modal__caption">Оставить заявку</h4>
     <div class="modal__form">
       <form action="">
-        <input type="text" name="name" placeholder="Имя">
-        <input type="tel" name="phone" placeholder="Телефон">
-        <select name="services">
+        <input type="text" id="name" name="name" autocomplete="name" placeholder="Имя" >
+        <input type="tel" id="phone" name="phone" placeholder="Телефон" autocomplete="tel">
+        <select id="services" name="services" autocomplete="off">
           <option value="">Услуга</option>
-          <option value="">Разработка сайтов в Астане </option>
-          <option value="">Разработка интернет-магазинов</option>
-          <option value="">SEO продвижение сайтов в Google и Яндекс </option>
+          <option value="">Услуга 1</option>
+          <option value="">Услуга 2</option>
         </select>
-        <textarea name="comment" placeholder="Комментарий"></textarea>
-        <button type="submit" class="modal__form-button button text-up">{ Отправить }</button>
+        <input type="submit" value="{ Отправить }" class="button button-primary">
       </form>
     </div>
   </div>

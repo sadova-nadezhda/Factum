@@ -5,16 +5,41 @@
 :root {
   --white: #FFFFFF;
   --dark: #0F0F0F;
-  --grey: #686F7B;
-  --light-grey: #A3A3A3;
-  --primary: #F96100;
+  --dark-secondary: #222222;
+  --grey: #EDEDED;
+  --light-grey: #F5F5F5;
+  --primary: #CB4E00;
+  --width-base: 1440;
+  --width-current: 100vw;
+  --width-multiplier: var(--width-current) / var(--width-base);
+}
+
+@media(max-width: 1024px) {
+    :root {
+      --width-base: 768;
+      --width-current: 100vmin;
+    }
+}
+
+@media(max-width: 767px) {
+    :root {
+      --width-base: 375;
+      --width-current: 100vmin;
+    }
 }
 
 html {
   height: 100%;
   scroll-behavior: smooth;
-  font: 400 16px/1.4 ZonaPro;
-  color: $dark;
+  scroll-padding-top: calc(100 * var(--width-multiplier));
+}
+
+:-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
 }
 
 *,
@@ -56,19 +81,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  scroll-behavior: smooth;
+  color: var(--dark, $dark);
+  font: 400 calc(16 * var(--width-multiplier))/1.4 Onest;
   text-rendering: optimizeSpeed;
-}
-
-body::-webkit-scrollbar {
-  width: 12px;
-  background-color: transparent;
-}
-
-body::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-  background-color: #f96100;
 }
 
 ul,
@@ -104,44 +119,43 @@ select {
 
 @media (prefers-reduced-motion: reduce) {
   * {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
 .container {
   width: 100%;
-  max-width: calc(1340px + 32px);
-  padding: 0 16px;
-  margin: 0 auto;
-
-  @media(max-width: 980px) {
-    max-width: none;
+  padding: 0 calc(50 * var(--width-multiplier));
+  @media(max-width: 1024px) {
+    padding: 0 calc(16 * var(--width-multiplier));
   }
 }
 
 input, select, textarea {
   width: 100%;
-  padding: 20px 0;
-  border: 0;
-  border-bottom: 1px solid var(--dark, $dark);
-  border-radius: 0;
-  color: var(--dark, $dark);
-  background-color: transparent;
-  font: 400 14px/1 ZonaPro;
+  padding: calc(20 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
+  border: 1px solid transparent;
+  border-radius: calc(8 * var(--width-multiplier));
+  color: var(--dark-secondary, $dark-secondary);
+  background-color: var(--grey, $grey);
+  font: inherit;
   &::placeholder {
-    color: var(--dark, $dark);
+    color: rgba(15, 15, 15, 0.4);
   }
-  &:focus {
+  &:focus, &:focus-visible {
     outline: none;
+  }
+  @media (max-width: 767px) {
+    padding: calc(16 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
   }
 }
 
 textarea {
   resize: none;
-  height: 140px;
+  height: calc(140 * var(--width-multiplier));
 }
 
 .button {
@@ -149,73 +163,75 @@ textarea {
   align-items: center;
   justify-content: center;
   width: max-content;
-  border: none;
-  border-radius: 0;
+  padding: calc(20 * var(--width-multiplier)) calc(48 * var(--width-multiplier));
+  border: 1px solid transparent;
+  border-radius: calc(8 * var(--width-multiplier));
   background-color: transparent;
-  font: 600 14px/1 Onest;
+  font: 600 calc(14 * var(--width-multiplier))/1 Onest;
   text-transform: uppercase;
-  @include transition;
-  @media (max-width: 980px) {
-    font-size: 12px;
-  }
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   &:hover:not(:disabled) {
     cursor: pointer;
   }
   &:disabled {
     opacity: 0.5;
   }
-  &-circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    border: 1px solid var(--dark, $dark);
-    background-color: var(--white, $white);
-    &:hover {
-      transform: scale(1.1);
-    }
-    @media (max-width: 980px) {
-      width: 160px;
-      height: 160px;
-    }
-  }
-  &-orange {
-    border: 1px solid var(--primary, $primary);
+  &-primary {
     color: var(--white, $white);
     background-color: var(--primary, $primary);
+    &:hover {
+      box-shadow: 0 0 16px rgba(203, 78, 0, 0.5);
+      transform: scale(0.95);
+    }
+  }
+  @media (max-width: 767px) {
+    padding: calc(16 * var(--width-multiplier)) calc(32 * var(--width-multiplier));
+    width: 100%;
   }
 }
 
-h1, h2 {
-  font: 700 40px/1 Onest;
-  @media (max-width: 980px) {
-    font-size: 32px;
+h1 {
+  font: 700 calc(48 * var(--width-multiplier))/1.2 Onest;
+  @media (max-width: 1024px) {
+    font-size: calc(40 * var(--width-multiplier));
   }
   @media (max-width: 767px) {
-    font-size: 24px;
+    font-size: calc(32 * var(--width-multiplier));
+  }
+}
+
+h2 {
+  font: 700 calc(40 * var(--width-multiplier))/1.2 Onest;
+  @media (max-width: 1024px) {
+    font-size: calc(32 * var(--width-multiplier));
+  }
+  @media (max-width: 767px) {
+    font-size: calc(24 * var(--width-multiplier));
   }
 }
 
 h3 {
-  font: 700 30px/1 Onest;
-  @media (max-width: 980px) {
-    font-size: 24px;
+  font: 600 calc(32 * var(--width-multiplier))/1.2 Onest;
+  @media (max-width: 1024px) {
+    font-size: calc(24 * var(--width-multiplier));
   }
   @media (max-width: 767px) {
-    font-size: 22px;
+    font-size: calc(22 * var(--width-multiplier));
   }
 }
 
 h4 {
-  font: 700 24px/1 Onest;
-  @media (max-width: 980px) {
-    font-size: 22px;
+  font: 600 calc(24 * var(--width-multiplier))/1.2 Onest;
+  @media (max-width: 1024px) {
+    font-size: calc(22 * var(--width-multiplier));
   }
   @media (max-width: 767px) {
-    font-size: 20px;
+    font-size: calc(20 * var(--width-multiplier));
   }
 }
 
 h5, h6 {
   font-family: Onest;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 1.2;
 }

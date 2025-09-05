@@ -153,6 +153,20 @@ input, select, textarea {
   }
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: calc(20 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
+  padding-right: calc(40 * var(--width-multiplier));
+  background: url(../img/down.svg) no-repeat top 50% right calc(16 * var(--width-multiplier));
+  background-color: var(--grey, $grey);
+  @media (max-width: 767px) {
+    padding: calc(16 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
+    padding-right: calc(40 * var(--width-multiplier));
+  }
+}
+
 textarea {
   resize: none;
   height: calc(140 * var(--width-multiplier));

@@ -6,6 +6,7 @@
   padding: calc(30 * var(--width-multiplier)) 0;
   background-color: var(--white, $white);
   z-index: 9;
+  transition: background-color 0.3s ease-in-out;
   @media (max-width: 1024px) {
     padding: calc(20 * var(--width-multiplier)) 0;
   }
@@ -17,6 +18,12 @@
     background-color: var(--dark, $dark);
     .header__container {
       animation: down 1s cubic-bezier(.39,.575,.565,1) forwards 6s;
+    }
+    &-2 {
+      background-color: transparent;
+      &.scroll {
+        background-color: var(--dark, $dark);
+      }
     }
   }
   &__container {

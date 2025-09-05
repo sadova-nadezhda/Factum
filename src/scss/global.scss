@@ -206,6 +206,15 @@ textarea {
 
 h1 {
   font: 700 calc(48 * var(--width-multiplier))/1.2 Onest;
+  &.s {
+    font-size: calc(40 * var(--width-multiplier));
+    @media (max-width: 1024px) {
+      font-size: calc(32 * var(--width-multiplier));
+    }
+    @media (max-width: 767px) {
+      font-size: calc(24 * var(--width-multiplier));
+    }
+  }
   @media (max-width: 1024px) {
     font-size: calc(40 * var(--width-multiplier));
   }

@@ -2917,6 +2917,8 @@ h6 {
     position: absolute;
     width: 90vh;
     height: 90vh;
+    max-width: calc(800 * var(--width-multiplier));
+    max-height: calc(800 * var(--width-multiplier));
     transform: translate(-50%, -50%);
   }
 }
@@ -2937,6 +2939,8 @@ h6 {
     left: 50%;
     width: 90vh;
     height: 90vh;
+    max-width: calc(800 * var(--width-multiplier));
+    max-height: calc(800 * var(--width-multiplier));
   }
 
   100% {

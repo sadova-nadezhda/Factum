@@ -2734,6 +2734,8 @@
     position: absolute;
     width: 90vh;
     height: 90vh;
+    max-width: calc(800 * var(--width-multiplier));
+    max-height: calc(800 * var(--width-multiplier));
     transform: translate(-50%, -50%);
   }
 }
@@ -2751,6 +2753,8 @@
     left: 50%;
     width: 90vh;
     height: 90vh;
+    max-width: calc(800 * var(--width-multiplier));
+    max-height: calc(800 * var(--width-multiplier));
   }
   100% {
     top: calc(100% - calc(5 * var(--width-multiplier)));

@@ -7,8 +7,17 @@ import { accordionInit } from './accordion.js';
 import { modalInit } from './modal.js';
 
 window.addEventListener("load", function () {
-  // preloader 
+  let header = document.querySelector("header");
 
+  function checkScroll() {
+    if (window.scrollY > 0) {
+      header.classList.add("scroll");
+    } else {
+      header.classList.remove("scroll");
+    }
+  }
+
+  checkScroll();
   
   menuInit();
   animateGsap();
@@ -36,6 +45,34 @@ window.addEventListener("load", function () {
               phoneWrapper.replaceWith(phoneLink);
           });
       }
+  });
+
+  // show
+
+  const boxSeo = document.querySelector('.seo__box');
+  const showBtn = document.querySelector('.seo__link.show');
+  const hideBtn = document.querySelector('.seo__link.hide');
+
+  if(boxSeo) {
+    showBtn.addEventListener('click', function() {
+      boxSeo.classList.add("open");
+      showBtn.style.display = 'none';
+      hideBtn.style.display = 'inline-block';
+    });
+  
+    hideBtn.addEventListener('click', function() {
+      boxSeo.classList.remove("open");
+      showBtn.style.display = 'inline-block';
+      hideBtn.style.display = 'none';
+    });
+  }
+
+  document.querySelectorAll('.contacts__map').forEach(map => {
+    const overlay = map.querySelector('.map-overlay');
+    overlay.addEventListener('click', () => {
+      map.classList.add('active');
+      overlay.style.display = 'none';
+    });
   });
 
   // mask for phone
@@ -72,5 +109,9 @@ window.addEventListener("load", function () {
     input.addEventListener("blur", mask, false);
     input.addEventListener("keydown", mask, false)
 
+  });
+
+  window.addEventListener("scroll", ()=> {
+    checkScroll();
   });
 });

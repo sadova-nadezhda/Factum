@@ -2,12 +2,33 @@
 <html lang="en">
   @@include('html/head.html', { "title": "О нас" })
   <body>
-    @@include('html/header.html', { "class": "", "img": "@img/logo.svg" })
+    @@include('html/header.html', { "class": "light light-2", "img": "@img/logo-2.svg" })
 
     <main>
-      <section class="about-hero section-first section-pad section-hidden">
+      <section class="about-hero section-hidden">
+        <img src="@img/about-hero.png" alt="">
+        <h1 class="about-hero__title s">Мы Factum, digital бюро со страстью творить.</h1>
+      </section>
+      <section class="about-company section-pad section-hidden">
         <div class="container">
-          <div class="about-hero__container">
+          <div class="about-company__container">
+            <h2 class="about-company__title up">О компании</h2>
+            <div class="about-company__desc text-xl up">Компания “FACTUM” с уважением обращается к Вам и предлагает комплекс услуг: разработка сайтов, мобильных приложений и онлайн-платформ, настройка контекстной рекламы, SEO-оптимизация, а также техническая поддержка ваших систем.</div>
+            <div class="about-company__images">
+              <img src="@img/people-1.png" alt="">
+              <img src="@img/people-2.png" alt="">
+              <img src="@img/people-3.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-benefits section-pad-bottom section-hidden">
+        <div class="container">
+          <div class="about-benefits__container">
+            <div class="about-benefits__heading heading up">
+              <h2 class="about-benefits__title title-s text-lower">Преимущества.</h2>
+              <a class="about-benefits__link link modal-btn">Оставить заявку</a>
+            </div>
             <div class="main-about__cards">
               <div class="main-about__card flip">
                 <div class="main-about__count">01</div>
@@ -47,7 +68,7 @@
         <div class="container">
           <div class="main-projects__container">
             <div class="main-projects__heading heading up">
-              <h2 class="main-projects__title title-sm">проекты.</h2>
+              <h2 class="main-projects__title title-s text-lower">проекты.</h2>
               <a class="main-projects__link link" href="">Все проекты</a>
             </div>
             <div class="main-projects__rows">
@@ -208,84 +229,108 @@
           </div>
         </div>
       </section>
-      <section class="teams section-pad section-hidden">
+      <section class="we-project section-pad section-hidden">
         <div class="container">
-          <h2 class="teams__title title-sm line-up bl-indent up">Команда</h2>
+          <div class="we-project__container">
+            <div class="we-project__heading heading up">
+              <h2 class="we-project__title title-s text-lower">We Project.</h2>
+            </div>
+            <div class="we-project__wrap">
+              <div class="we-project__info">
+                <div class="we-project__subtitle">Factum bureau — больше, чем агентство</div>
+                <div class="we-project__desc text-m">Мы не только разрабатываем и продвигаем сайты, но и следим за последними новостями digital-мира, делясь ими с вами. Один из примеров — наша статья на популярном медиаресурсе <strong>We Project.</strong></div>
+                <a href="" class="we-project__button button button-primary">{ смотреть статью }</a>
+              </div>
+              <div class="we-project__img">
+                <img src="@img/person-1.png" alt="">
+                
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="teams__slider">
-          <div class="swiper teamsSwiper">
-            <div class="swiper-wrapper">
-              <div class="teams__slide swiper-slide">
-                <div class="teams__img"><img src="@img/team-5.jpg" alt="Амир Директор"></div>
-                <div class="teams__content">
-                  <div class="teams__head">
-                    <div class="teams__author">Шакарим</div>
-                    <div class="teams__position text-sm">Руководитель отдела разработки</div>
+      </section>
+      <section class="teams section-pad-bottom section-hidden">
+        <div class="container">
+          <div class="teams__container">
+            <div class="teams__heading heading up">
+              <h2 class="teams__title title-s text-lower">Команда.</h2>
+            </div>
+            <div class="teams__slider">
+              <div class="swiper teamsSwiper">
+                <div class="swiper-wrapper">
+                  <div class="teams__slide swiper-slide">
+                    <div class="teams__img"><img src="@img/team-1.jpg" alt="Амир Директор"></div>
+                    <div class="teams__content">
+                      <div class="teams__head">
+                        <div class="teams__author">Амир</div>
+                        <div class="teams__position text-sm">Директор</div>
+                      </div>
+                      <div class="teams__desc">
+                        <p>“ Безумно можно быть первым ”</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="teams__desc">
-                    <p>“  ”</p>
+                  <div class="teams__slide swiper-slide">
+                    <div class="teams__img"><img src="@img/team-2.jpg" alt="Амир Директор"></div>
+                    <div class="teams__content">
+                      <div class="teams__head">
+                        <div class="teams__author">Тимур</div>
+                        <div class="teams__position text-sm">Исполнительный директор</div>
+                      </div>
+                      <div class="teams__desc">
+                        <p>“  ”</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="teams__slide swiper-slide">
-                <div class="teams__img"><img src="@img/team-6.jpg" alt="Амир Директор"></div>
-                <div class="teams__content">
-                  <div class="teams__head">
-                    <div class="teams__author">Махаббат</div>
-                    <div class="teams__position text-sm">Главный разработчик</div>
+                  <div class="teams__slide swiper-slide">
+                    <div class="teams__img"><img src="@img/team-3.jpg" alt="Амир Директор"></div>
+                    <div class="teams__content">
+                      <div class="teams__head">
+                        <div class="teams__author">Даниил</div>
+                        <div class="teams__position text-sm">Руководитель отдела продвижения</div>
+                      </div>
+                      <div class="teams__desc">
+                        <p>“ Вижу цель - не вижу препятствий ”</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="teams__desc">
-                    <p>“ Every day for us something new<br>
-                      Open mind for a different view<br>
-                      And nothing else matters ”</p>
+                  <div class="teams__slide swiper-slide">
+                    <div class="teams__img"><img src="@img/team-5.jpg" alt="Амир Директор"></div>
+                    <div class="teams__content">
+                      <div class="teams__head">
+                        <div class="teams__author">Сергей</div>
+                        <div class="teams__position text-sm">Руководитель отдела разработки</div>
+                      </div>
+                      <div class="teams__desc">
+                        <p>“  ”</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="teams__slide swiper-slide">
-                <div class="teams__img"><img src="@img/team-1.jpg" alt="Амир Директор"></div>
-                <div class="teams__content">
-                  <div class="teams__head">
-                    <div class="teams__author">Амир</div>
-                    <div class="teams__position text-sm">Директор</div>
+                  <div class="teams__slide swiper-slide">
+                    <div class="teams__img"><img src="@img/team-4.png" alt="Амир Директор"></div>
+                    <div class="teams__content">
+                      <div class="teams__head">
+                        <div class="teams__author">Аскар</div>
+                        <div class="teams__position text-sm">Старший проект-менеджер</div>
+                      </div>
+                      <div class="teams__desc">
+                        <p>“  ”</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="teams__desc">
-                    <p>“ Безумно можно быть первым ”</p>
-                  </div>
-                </div>
-              </div>
-              <div class="teams__slide swiper-slide">
-                <div class="teams__img"><img src="@img/team-2.jpg" alt="Амир Директор"></div>
-                <div class="teams__content">
-                  <div class="teams__head">
-                    <div class="teams__author">Тимур</div>
-                    <div class="teams__position text-sm">Исполнительный директор</div>
-                  </div>
-                  <div class="teams__desc">
-                    <p>“  ”</p>
-                  </div>
-                </div>
-              </div>
-              <div class="teams__slide swiper-slide">
-                <div class="teams__img"><img src="@img/team-3.jpg" alt="Амир Директор"></div>
-                <div class="teams__content">
-                  <div class="teams__head">
-                    <div class="teams__author">Даниил</div>
-                    <div class="teams__position text-sm">Руководитель отдела продвижения</div>
-                  </div>
-                  <div class="teams__desc">
-                    <p>“ Вижу цель - не вижу препятствий ”</p>
-                  </div>
-                </div>
-              </div>
-              <div class="teams__slide swiper-slide">
-                <div class="teams__img"><img src="@img/team-4.png" alt="Амир Директор"></div>
-                <div class="teams__content">
-                  <div class="teams__head">
-                    <div class="teams__author">Аскар</div>
-                    <div class="teams__position text-sm">Старший проект-менеджер</div>
-                  </div>
-                  <div class="teams__desc">
-                    <p>“  ”</p>
+                  <div class="teams__slide swiper-slide">
+                    <div class="teams__img"><img src="@img/team-6.jpg" alt="Амир Директор"></div>
+                    <div class="teams__content">
+                      <div class="teams__head">
+                        <div class="teams__author">Махаббат</div>
+                        <div class="teams__position text-sm">Главный разработчик</div>
+                      </div>
+                      <div class="teams__desc">
+                        <p>“ Every day for us something new<br>
+                          Open mind for a different view<br>
+                          And nothing else matters ”</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

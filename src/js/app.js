@@ -111,6 +111,82 @@ window.addEventListener("load", function () {
 
   });
 
+    // preloader 
+
+  function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+      let date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + value + "; path=/" + expires;
+  }
+
+  function getCookie(name) {
+    let nameEQ = name + "=";
+    let ca = document.cookie.split(";");
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i].trim();
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  const preloader = document.querySelector(".preloader");
+  const letters   = document.querySelector(".preloader__letters");
+  const dote      = document.querySelector(".preloader__dote");
+
+  if (!preloader) return;
+
+  if (getCookie("preloader_shown")) {
+    // если уже показывали — просто скрываем прелоадер
+    preloader.style.opacity = 0;
+    preloader.style.zIndex = -1;
+    return;
+  }
+
+  // ставим куку на 1 день
+  setCookie("preloader_shown", "1", 1);
+  document.documentElement.classList.add("anim-delay");
+
+  // начальные состояния
+  gsap.set(preloader, { autoAlpha: 1 });
+  gsap.set(letters, { autoAlpha: 0 });
+  gsap.set(dote, {
+    top: "50%", left: "50%", xPercent: -50, yPercent: -50,
+    width: 0, height: 0, borderRadius: "50%"
+  });
+
+  // таймлайн
+  const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+  tl.to(dote, {
+    width: "90vh", height: "90vh",
+    maxWidth: "calc(800 * var(--width-multiplier))",
+    maxHeight: "calc(800 * var(--width-multiplier))",
+    duration: 2
+  }, 0);
+
+  tl.to(letters, { autoAlpha: 1, duration: 1 }, 2);
+
+  tl.to(dote, {
+    top: "calc(100% - calc(5 * var(--width-multiplier)))",
+    left: "calc(100% + calc(7 * var(--width-multiplier)))",
+    width: "calc(7 * var(--width-multiplier))",
+    height: "calc(7 * var(--width-multiplier))",
+    xPercent: -50, yPercent: -50,
+    duration: 1
+  }, 3);
+
+  tl.to(preloader, {
+    autoAlpha: 0, duration: 1,
+    onComplete() {
+      preloader.style.zIndex = -1;
+      preloader.style.pointerEvents = "none";
+    }
+  }, 6);
+
   window.addEventListener("scroll", ()=> {
     checkScroll();
   });

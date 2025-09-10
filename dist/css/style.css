@@ -350,25 +350,25 @@ h6 {
   transition: background-color 0.3s ease-in-out;
 }
 
-.header.light {
+.header.primary {
   color: var(--white, #FFFFFF);
   background-color: var(--dark, #0F0F0F);
 }
 
-.header.light .header__container {
+.header.primary .header__container {
   animation: down 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 6s;
 }
 
-.header.light-2 {
+.header.light {
   color: var(--white, #FFFFFF);
   background-color: transparent;
 }
 
-.header.light-2 .header__container {
+.header.light .header__container {
   animation: down 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
 }
 
-.header.light-2.scroll {
+.header.light.scroll {
   background-color: var(--dark, #0F0F0F);
 }
 

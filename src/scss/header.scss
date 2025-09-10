@@ -13,21 +13,21 @@
   @media (max-width: 767px) {
     padding: calc(16 * var(--width-multiplier)) 0;
   }
-  &.light {
+  &.primary {
     color: var(--white, $white);
     background-color: var(--dark, $dark);
     .header__container {
       animation: down 1s cubic-bezier(.39,.575,.565,1) forwards 6s;
     }
-    &-2 {
-      color: var(--white, $white);
-      background-color: transparent;
-      .header__container {
-        animation: down 1s cubic-bezier(.39,.575,.565,1) forwards;
-      }
-      &.scroll {
-        background-color: var(--dark, $dark);
-      }
+  }
+  &.light {
+    color: var(--white, $white);
+    background-color: transparent;
+    .header__container {
+      animation: down 1s cubic-bezier(.39,.575,.565,1) forwards;
+    }
+    &.scroll {
+      background-color: var(--dark, $dark);
     }
   }
   &__container {
